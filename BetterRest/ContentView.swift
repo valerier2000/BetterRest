@@ -54,7 +54,7 @@ struct ContentView: View {
                 
                 Section("Daily coffee intake") {
                     Picker("Number of cups", selection: $coffeeAmount) {
-                        ForEach(1..<21) {
+                        ForEach(1..<21, id: \.self) {
                             Text("^[\($0) cup](inflect: true)")
                         }
                     }
